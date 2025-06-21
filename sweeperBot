@@ -1,0 +1,479 @@
+import math
+import time
+import random
+import pyautogui
+from pynput import keyboard
+from datetime import datetime
+from gamestate import GameState
+from mss import mss
+
+# to increase speed!!
+pyautogui.PAUSE = 0
+pyautogui.MINIMUM_DURATION = 0
+pyautogui.MINIMUM_SLEEP = 0
+exitt = False
+stat_tracking = False
+
+# create log file 
+if stat_tracking:
+    log_fn = f"minesweeper_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+
+# -------- pretend this is a settings menu, taylor to your device + desired game size ------- #
+# board geometry
+total_mines = 99
+top_left_x, top_left_y = 260, 258
+tile_size = 32
+grid_w, grid_h = 30, 16
+
+# loss + win detector coords & RGB
+frown_x, frown_y = 733, 214
+frown_rgb = (64, 64, 21)
+shades_x, shades_y = 740, 201
+shades_rgb = (0, 0, 0)
+cancel_rgb = (110, 53, 45)
+cancel_x, cancel_y = 810, 278
+# ---------------------------------------------------------------------#
+
+# helper to quit runnin the program when u click q
+def on_press(key):
+    global exitt
+    if key.char == 'q':
+        print("\nDetected 'q' -> exiting.")
+        exitt = True
+        return False
+
+# helper that checks our loss pixel
+def detect_loss(sct):
+    shot = sct.grab({'left': frown_x, 'top': frown_y, 'width': 1, 'height': 1})
+    return shot.pixel(0, 0) == frown_rgb
+
+# helper that checks our win pixel
+def detect_win(sct):
+    # keeping the below line around as it is what to check when you dont set a record
+    #shot = sct.grab({'left': shades_x, 'top': shades_y, #'width': 1, 'height': 1})
+    shot = sct.grab({'left': cancel_x, 'top': cancel_y, 'width': 1, 'height': 1})
+    return shot.pixel(0, 0) == cancel_rgb
+
+# helper function for union-find data structure with path compression
+def find_disj(p, i):
+    while p[i] != i:
+        p[i] = p[p[i]]
+        i = p[i]
+    return i
+
+# helper function to union two sets in union-find data structure
+def union_disj(p, a, b):
+    ra, rb = find_disj(p, a), find_disj(p, b)
+    if ra != rb:
+        p[rb] = ra
+
+# helper function for backtracking in solve_cluster
+def backtrack(idx, n, assign, tile_to_cons, needed_list, num_unknown, loc_idx, num_mines):
+    total_configs = 0
+    
+    if idx == n:
+        # found one valid configuration
+        total_configs += 1
+        for t, t2 in loc_idx.items():
+            if assign[t2]:
+                num_mines[t] += 1
+        return total_configs
+
+    # case 1 -> mark tile idx as safe
+    assign[idx] = False
+    updates = []
+    valid = True
+    for c in tile_to_cons[idx]:
+        old_need, old_rem = needed_list[c], num_unknown[c]
+        num_unknown[c] = old_rem - 1
+        updates.append((c, old_need, old_rem))
+        # if we now need more mines than can fit, prune
+        if needed_list[c] > num_unknown[c]:
+            valid = False
+            break
+    if valid:
+        total_configs += backtrack(idx + 1, n, assign, tile_to_cons, needed_list, num_unknown, loc_idx, num_mines)
+    # restore
+    for c, old_need, old_rem in updates:
+        needed_list[c] = old_need
+        num_unknown[c] = old_rem
+
+    # case 2 - > mark tile idx as mine
+    assign[idx] = True
+    updates = []
+    valid = True
+    for c in tile_to_cons[idx]:
+        old_need, old_rem = needed_list[c], num_unknown[c]
+        num_unknown[c] = old_rem - 1
+        needed_list[c] = old_need - 1
+        updates.append((c, old_need, old_rem))
+        # if we need negative mines or more mines than remain, prune
+        if needed_list[c] < 0 or needed_list[c] > num_unknown[c]:
+            valid = False
+            break
+    if valid:
+        total_configs += backtrack(idx + 1, n, assign, tile_to_cons, needed_list, num_unknown, loc_idx, num_mines)
+    # restore
+    for c, old_need, old_rem in updates:
+        needed_list[c] = old_need
+        num_unknown[c] = old_rem
+        
+    return total_configs
+
+#    clues is a list of (hidden_neighbors_list, mines_needed) for every number-tile 
+#    We then enumerate all valid bomb configs on cluster_tiles and return both the total number of 
+#    configs, and a dict mapping each tile to the # of times its a mine.
+def solve_cluster(clus_ts, clues):
+    # local index for each tile in this cluster
+    loc_idx = {t: i for i, t in enumerate(clus_ts)}
+    n = len(clus_ts)
+
+    # keep only the constraints that involve this cluster's tiles
+    constraints = []
+    for hidden, needed in clues:
+        rel = [t for t in hidden if t in loc_idx]
+        if rel:
+            constraints.append((rel, needed))
+
+    if not constraints:
+        return 0, {}
+
+    # prepare arrays for backtracking
+    needed_list = [need for (hids, need) in constraints]
+    rem_unknown = [len(hids) for (hids, need) in constraints]
+
+    # map each local tile idx to the indices of constraints it appears in
+    tile_to_cons = {i: [] for i in range(n)}
+    for ci, (hids, need) in enumerate(constraints):
+        for t in hids:
+            tile_to_cons[loc_idx[t]].append(ci)
+
+    total_configs = 0
+    num_mines = {t: 0 for t in clus_ts}
+    assign = [False] * n  # false = safe, true = mine
+
+    total_configs = backtrack(0, n, assign, tile_to_cons, needed_list, rem_unknown, loc_idx, num_mines)
+    return total_configs, num_mines
+
+
+#    return the Tile with the lowest probability of being a mine,
+#    or a random hidden Tile if has lower prob
+def guess_safe(gs):
+    # build the list of clues and the set of border tiles
+    clues = []         # each: ( [tile,...], mines_needed )
+    borders = set()
+    for row in gs.grid:
+        for t in row:
+            if not t.is_revealed or t.number_value == 0:
+                continue
+            # count flags & collect hidden neighbors
+            flagged = sum(1 for n in t.neighbors if n.is_flagged)
+            hidden  = [n for n in t.neighbors if not n.is_revealed and not n.is_flagged]
+            needed = t.number_value - flagged
+            if hidden and 0 <= needed <= len(hidden):
+                clues.append((hidden, needed))
+                borders.update(hidden)
+
+    # all hidden tiles (for fallback)
+    all_hidden = [t for row in gs.grid for t in row if not t.is_revealed and not t.is_flagged]
+    if not all_hidden:
+        return None
+
+    # if no border constraints, use improved random selection
+    if not borders:
+        # Prefer tiles with more revealed neighbors
+        max_rev = -1
+        best_tiles = []
+        for t in all_hidden:
+            revealed = sum(1 for n in t.neighbors if n.is_revealed)
+            if revealed > max_rev:
+                max_rev = revealed
+                best_tiles = [t]
+            elif revealed == max_rev:
+                best_tiles.append(t)
+        return random.choice(best_tiles)
+
+    # cluster analysis
+    tile_idx = {t: i for i, t in enumerate(borders)}
+    parent = list(range(len(tile_idx)))
+
+    # union any two tiles that appear together in a clue
+    for hidden, needed in clues:
+        ids = [tile_idx[t] for t in hidden]
+        for i in ids[1:]:
+            union_disj(parent, ids[0], i)
+
+    # build clusters: root_index -> list of Tiles
+    clusters = {}
+    for t, idx in tile_idx.items():
+        root = find_disj(parent, idx)
+        clusters.setdefault(root, []).append(t)
+
+    # solve each cluster to find the tile with lowest bomb probability
+    best_tile = None
+    best_p = 1.0
+    for clus_ts in clusters.values():
+        total, mine_count = solve_cluster(clus_ts, clues)
+        if total == 0:
+            continue
+        for t in clus_ts:
+            prob = mine_count.get(t, 0) / total
+            if prob < best_p:
+                best_p, best_tile = prob, t
+
+    # compute global-average mine probability
+    num_flag = sum(1 for row in gs.grid for t in row if t.is_flagged)
+    num_hidden  = len(all_hidden)
+    if gs.num_mines is not None:
+        r = gs.num_mines - num_flag
+        ov_avg = r / num_hidden
+    else:
+        # fallback if we don't know total mines
+        ov_avg = num_flag / num_hidden
+
+    # return best_tile if it beats the random baseline, else random
+    if best_tile and best_p < ov_avg:
+        return best_tile
+    
+    # prefer tiles with more revealed neighbors
+    max_rev = -1
+    best_tiles = []
+    for t in all_hidden:
+        revealed = sum(1 for n in t.neighbors if n.is_revealed)
+        if revealed > max_rev:
+            max_rev = revealed
+            best_tiles = [t]
+        elif revealed == max_rev:
+            best_tiles.append(t)
+    return random.choice(best_tiles)
+
+
+
+def find_simple_bombs(gs):
+    bombs = set()
+    for row in gs.grid:
+        for t in row:
+            # skip unrevealed or zero-tiles
+            nv = t.number_value
+            if not t.is_revealed or nv == 0:
+                continue
+
+            # count flagged, collect hidden
+            flagged = 0
+            hidden = []
+            for n in t.neighbors:
+                if not n.is_revealed:
+                    if n.is_flagged:
+                        flagged += 1
+                    else:
+                        hidden.append(n)
+            # if remaining neighbors must all be mines
+            if nv - flagged == len(hidden):
+                bombs.update(hidden)
+    return bombs
+
+def find_simple_safe(gs):
+    safe = set()
+    for row in gs.grid:
+        for t in row:
+            nv = t.number_value
+            if not t.is_revealed or nv == 0:
+                continue
+
+            flagged = 0
+            hidden = []
+            for n in t.neighbors:
+                if not n.is_revealed:
+                    if n.is_flagged:
+                        flagged += 1
+                    else:
+                        hidden.append(n)
+            # if flags satisfy the number, the rest are safe
+            if nv == flagged:
+                safe.update(hidden)
+    return safe
+
+
+def solve_game():
+    lost = 0 
+    won = 0
+    start_time = time.time()
+    gs = GameState(tile_size=tile_size, top_left_x=top_left_x, top_left_y=top_left_y, cols=grid_w, rows=grid_h, num_mines=total_mines)
+
+    # first click in center (could also do corner)
+    cx = top_left_x + (grid_w // 2) * tile_size + tile_size//2
+    cy = top_left_y + (grid_h // 2) * tile_size + tile_size//2
+    
+    pyautogui.click(cx, cy) 
+    gs.update_game_state()
+
+    sct = mss()  # keep one MSS session open
+    
+    while not exitt:
+        if detect_loss(sct):
+            end_time = time.time()
+            print(f"💥 Kaboom, you lose! Game took {end_time - start_time:.2f} seconds")
+            pyautogui.click(frown_x, frown_y)
+            return False, end_time - start_time
+        if detect_win(sct):
+            end_time = time.time()
+            print(f"🏆 Winner! Game took {end_time - start_time:.2f} seconds")
+            time.sleep(0.7) # roughly the time it takes for the button to pop up 
+            pyautogui.click(cancel_x, cancel_y)
+            time.sleep(0.7)
+            pyautogui.click(shades_x, shades_y)
+            return True, end_time - start_time
+
+        # flag bombs
+        bombs = find_simple_bombs(gs)
+        if bombs:
+            for b in bombs:
+                gs.flag(b.x, b.y)
+            gs.update_game_state()
+            continue
+
+        # reveal safe
+        safe = find_simple_safe(gs)
+        if safe:
+            for t in safe:
+                gs.reveal(t.x, t.y)
+            gs.update_game_state()
+            continue
+
+        # if we have no deterministic moves from our simple rules, we must 
+        # compute probabilities to make an informed guess
+        hidden = [t for row in gs.grid for t in row if not t.is_revealed and not t.is_flagged]
+        if not hidden:
+            end_time = time.time()
+            print(f"🎉 No hidden tiles left -> assuming win. Game took {end_time - start_time:.2f} seconds")
+            time.sleep(0.7)
+            pyautogui.click(cancel_x, cancel_y)
+            time.sleep(0.7)
+            pyautogui.click(shades_x, shades_y)
+            return True, end_time - start_time
+        
+        guess = guess_safe(gs)
+        
+        # compute center of our guess tile
+        gx = top_left_x + guess.x*tile_size + tile_size//2
+        gy = top_left_y + guess.y*tile_size + tile_size//2
+            
+        pyautogui.click(gx, gy)
+        gs.update_game_state()
+
+ 
+    sct.close()
+
+    end_time = time.time()
+    return False, end_time - start_time
+
+# function for testing the RGB values of a pixel
+def test_color(sct):
+    shot = sct.grab({'left': cancel_x, 'top': cancel_y, 'width': 1,    'height': 1})
+    pyautogui.moveTo(cancel_x,cancel_y) # put pixel here and in above line
+    print(shot.pixel(0, 0))
+
+# function that gets our stats
+def calc_stats(game_times):
+    if not game_times:
+        return 0, 0
+    mean = sum(game_times) / len(game_times)
+    variance = sum((t - mean) ** 2 for t in game_times) / len(game_times)
+    std_dev = math.sqrt(variance)
+    return mean, std_dev
+
+# puts our stats into the log file
+def log_game_stats(games_played, wins, losses, game_time, total_time, win_rate, game_times, winning_times):
+    mean_time, std_dev = calc_stats(game_times)
+    win_mean_time, win_std_dev = calc_stats(winning_times)
+    
+    with open(log_fn, 'a') as f:
+        f.write(f"\nGame {games_played} Statistics:\n")
+        f.write(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Game Duration: {game_time:.2f} seconds\n")
+        f.write(f"Wins: {wins}, Losses: {losses}\n")
+        f.write(f"Win Rate: {win_rate:.1f}%\n")
+        f.write(f"Overall Average Game Time: {mean_time:.2f} seconds\n")
+        if winning_times:
+            f.write(f"Average Winning Game Time: {win_mean_time:.2f} seconds\n")
+            f.write(f"Winning Time Standard Deviation: {win_std_dev:.2f} seconds\n")
+        f.write(f"Total Time Played: {total_time:.2f} seconds\n")
+        f.write("-" * 50 + "\n")
+
+if __name__ == "__main__":
+    time.sleep(1) # enough time to swap to the minesweeper window
+    print("Press q to stop.")
+    
+    if stat_tracking:
+        with open(log_fn, 'w') as f:
+             f.write("Minesweeper Bot Statistics Log\n")
+             f.write(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+             f.write("-" * 50 + "\n")
+    
+    listener = keyboard.Listener(on_press=on_press)
+    listener.start()
+
+    win = 0
+    loss = 0
+    total_time = 0
+    game_times = []     
+    winning_times = []  
+    
+    while not exitt: # loop till we press q.
+        result, game_time = solve_game()
+        total_time += game_time
+        game_times.append(game_time)
+        
+        if result:
+            win += 1
+            winning_times.append(game_time)
+        else: 
+            loss += 1
+        games_played = win + loss
+        win_rate = (win / games_played) * 100
+        
+        mean_time, std_dev = calc_stats(game_times)
+        win_mean_time, win_std_dev = calc_stats(winning_times)
+        
+        # print to console
+        print(f"\nGame Statistics:")
+        print(f"Games played: {games_played}")
+        print(f"Wins: {win}, Losses: {loss}")
+        print(f"Win rate: {win_rate:.1f}%")
+        print(f"Last game time: {game_time:.2f} seconds")
+        print(f"Overall average time: {mean_time:.2f} seconds")
+        if winning_times:
+            print(f"Average winning time: {win_mean_time:.2f} seconds")
+            print(f"Winning time std dev: {win_std_dev:.2f} seconds")
+        print(f"Total time played: {total_time:.2f} seconds\n")
+        
+        if stat_tracking:
+            log_game_stats(games_played, win, loss, game_time, total_time, win_rate, game_times, winning_times)
+        
+        if games_played == 1000:
+            break
+
+    if stat_tracking:
+        # write summary 
+        mean_time, std_dev = calc_stats(game_times)
+        win_mean_time, win_std_dev = calc_stats(winning_times)
+
+        with open(log_fn, 'a') as f:
+            f.write("\nFinal Summary:\n")
+            f.write(f"Ended: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Total Games: {games_played}\n")
+            f.write(f"Final Win Rate: {win_rate:.1f}%\n")
+            f.write(f"Overall Average Game Time: {mean_time:.2f} seconds\n")
+            if winning_times:
+                f.write(f"Average Winning Game Time: {win_mean_time:.2f} seconds\n")
+                f.write(f"Winning Time Standard Deviation: {win_std_dev:.2f} seconds\n")
+            f.write(f"Total Time Played: {total_time:.2f} seconds\n")
+            f.write("\nGame Time Distribution:\n")
+            f.write(f"Fastest game overall: {min(game_times):.2f} seconds\n")
+            f.write(f"Slowest game overall: {max(game_times):.2f} seconds\n")
+            if winning_times:
+                f.write(f"Fastest winning game: {min(winning_times):.2f} seconds\n")
+                f.write(f"Slowest winning game: {max(winning_times):.2f} seconds\n")
+        
+    listener.join()
+    print("Program terminated.")

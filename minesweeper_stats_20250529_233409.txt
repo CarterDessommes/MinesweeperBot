@@ -1,0 +1,1101 @@
+Minesweeper Bot Statistics Log
+Started: 2025-05-29 23:34:10
+--------------------------------------------------
+
+Game 1 Statistics:
+Time: 2025-05-29 23:34:28
+Game Duration: 18.56 seconds
+Wins: 0, Losses: 1
+Win Rate: 0.0%
+Overall Average Game Time: 18.56 seconds
+Total Time Played: 18.56 seconds
+--------------------------------------------------
+
+Game 2 Statistics:
+Time: 2025-05-29 23:34:31
+Game Duration: 2.60 seconds
+Wins: 0, Losses: 2
+Win Rate: 0.0%
+Overall Average Game Time: 10.58 seconds
+Total Time Played: 21.17 seconds
+--------------------------------------------------
+
+Game 3 Statistics:
+Time: 2025-05-29 23:34:58
+Game Duration: 25.52 seconds
+Wins: 1, Losses: 2
+Win Rate: 33.3%
+Overall Average Game Time: 15.56 seconds
+Average Winning Game Time: 25.52 seconds
+Winning Time Standard Deviation: 0.00 seconds
+Total Time Played: 46.69 seconds
+--------------------------------------------------
+
+Game 4 Statistics:
+Time: 2025-05-29 23:35:16
+Game Duration: 18.15 seconds
+Wins: 1, Losses: 3
+Win Rate: 25.0%
+Overall Average Game Time: 16.21 seconds
+Average Winning Game Time: 25.52 seconds
+Winning Time Standard Deviation: 0.00 seconds
+Total Time Played: 64.84 seconds
+--------------------------------------------------
+
+Game 5 Statistics:
+Time: 2025-05-29 23:35:35
+Game Duration: 19.18 seconds
+Wins: 1, Losses: 4
+Win Rate: 20.0%
+Overall Average Game Time: 16.80 seconds
+Average Winning Game Time: 25.52 seconds
+Winning Time Standard Deviation: 0.00 seconds
+Total Time Played: 84.02 seconds
+--------------------------------------------------
+
+Game 6 Statistics:
+Time: 2025-05-29 23:35:51
+Game Duration: 15.83 seconds
+Wins: 1, Losses: 5
+Win Rate: 16.7%
+Overall Average Game Time: 16.64 seconds
+Average Winning Game Time: 25.52 seconds
+Winning Time Standard Deviation: 0.00 seconds
+Total Time Played: 99.85 seconds
+--------------------------------------------------
+
+Game 7 Statistics:
+Time: 2025-05-29 23:36:19
+Game Duration: 26.19 seconds
+Wins: 2, Losses: 5
+Win Rate: 28.6%
+Overall Average Game Time: 18.01 seconds
+Average Winning Game Time: 25.86 seconds
+Winning Time Standard Deviation: 0.34 seconds
+Total Time Played: 126.05 seconds
+--------------------------------------------------
+
+Game 8 Statistics:
+Time: 2025-05-29 23:36:48
+Game Duration: 27.70 seconds
+Wins: 3, Losses: 5
+Win Rate: 37.5%
+Overall Average Game Time: 19.22 seconds
+Average Winning Game Time: 26.47 seconds
+Winning Time Standard Deviation: 0.91 seconds
+Total Time Played: 153.75 seconds
+--------------------------------------------------
+
+Game 9 Statistics:
+Time: 2025-05-29 23:37:11
+Game Duration: 22.90 seconds
+Wins: 3, Losses: 6
+Win Rate: 33.3%
+Overall Average Game Time: 19.63 seconds
+Average Winning Game Time: 26.47 seconds
+Winning Time Standard Deviation: 0.91 seconds
+Total Time Played: 176.64 seconds
+--------------------------------------------------
+
+Game 10 Statistics:
+Time: 2025-05-29 23:37:28
+Game Duration: 17.22 seconds
+Wins: 3, Losses: 7
+Win Rate: 30.0%
+Overall Average Game Time: 19.39 seconds
+Average Winning Game Time: 26.47 seconds
+Winning Time Standard Deviation: 0.91 seconds
+Total Time Played: 193.86 seconds
+--------------------------------------------------
+
+Game 11 Statistics:
+Time: 2025-05-29 23:37:39
+Game Duration: 10.83 seconds
+Wins: 3, Losses: 8
+Win Rate: 27.3%
+Overall Average Game Time: 18.61 seconds
+Average Winning Game Time: 26.47 seconds
+Winning Time Standard Deviation: 0.91 seconds
+Total Time Played: 204.70 seconds
+--------------------------------------------------
+
+Game 12 Statistics:
+Time: 2025-05-29 23:37:56
+Game Duration: 17.07 seconds
+Wins: 3, Losses: 9
+Win Rate: 25.0%
+Overall Average Game Time: 18.48 seconds
+Average Winning Game Time: 26.47 seconds
+Winning Time Standard Deviation: 0.91 seconds
+Total Time Played: 221.77 seconds
+--------------------------------------------------
+
+Game 13 Statistics:
+Time: 2025-05-29 23:38:18
+Game Duration: 20.39 seconds
+Wins: 4, Losses: 9
+Win Rate: 30.8%
+Overall Average Game Time: 18.63 seconds
+Average Winning Game Time: 24.95 seconds
+Winning Time Standard Deviation: 2.75 seconds
+Total Time Played: 242.16 seconds
+--------------------------------------------------
+
+Game 14 Statistics:
+Time: 2025-05-29 23:38:32
+Game Duration: 14.65 seconds
+Wins: 4, Losses: 10
+Win Rate: 28.6%
+Overall Average Game Time: 18.34 seconds
+Average Winning Game Time: 24.95 seconds
+Winning Time Standard Deviation: 2.75 seconds
+Total Time Played: 256.81 seconds
+--------------------------------------------------
+
+Game 15 Statistics:
+Time: 2025-05-29 23:38:49
+Game Duration: 16.16 seconds
+Wins: 4, Losses: 11
+Win Rate: 26.7%
+Overall Average Game Time: 18.20 seconds
+Average Winning Game Time: 24.95 seconds
+Winning Time Standard Deviation: 2.75 seconds
+Total Time Played: 272.97 seconds
+--------------------------------------------------
+
+Game 16 Statistics:
+Time: 2025-05-29 23:39:07
+Game Duration: 18.46 seconds
+Wins: 4, Losses: 12
+Win Rate: 25.0%
+Overall Average Game Time: 18.21 seconds
+Average Winning Game Time: 24.95 seconds
+Winning Time Standard Deviation: 2.75 seconds
+Total Time Played: 291.43 seconds
+--------------------------------------------------
+
+Game 17 Statistics:
+Time: 2025-05-29 23:39:35
+Game Duration: 26.94 seconds
+Wins: 5, Losses: 12
+Win Rate: 29.4%
+Overall Average Game Time: 18.73 seconds
+Average Winning Game Time: 25.35 seconds
+Winning Time Standard Deviation: 2.59 seconds
+Total Time Played: 318.38 seconds
+--------------------------------------------------
+
+Game 18 Statistics:
+Time: 2025-05-29 23:39:49
+Game Duration: 13.11 seconds
+Wins: 5, Losses: 13
+Win Rate: 27.8%
+Overall Average Game Time: 18.42 seconds
+Average Winning Game Time: 25.35 seconds
+Winning Time Standard Deviation: 2.59 seconds
+Total Time Played: 331.48 seconds
+--------------------------------------------------
+
+Game 19 Statistics:
+Time: 2025-05-29 23:40:08
+Game Duration: 19.26 seconds
+Wins: 5, Losses: 14
+Win Rate: 26.3%
+Overall Average Game Time: 18.46 seconds
+Average Winning Game Time: 25.35 seconds
+Winning Time Standard Deviation: 2.59 seconds
+Total Time Played: 350.74 seconds
+--------------------------------------------------
+
+Game 20 Statistics:
+Time: 2025-05-29 23:40:30
+Game Duration: 22.19 seconds
+Wins: 5, Losses: 15
+Win Rate: 25.0%
+Overall Average Game Time: 18.65 seconds
+Average Winning Game Time: 25.35 seconds
+Winning Time Standard Deviation: 2.59 seconds
+Total Time Played: 372.93 seconds
+--------------------------------------------------
+
+Game 21 Statistics:
+Time: 2025-05-29 23:40:46
+Game Duration: 15.85 seconds
+Wins: 5, Losses: 16
+Win Rate: 23.8%
+Overall Average Game Time: 18.51 seconds
+Average Winning Game Time: 25.35 seconds
+Winning Time Standard Deviation: 2.59 seconds
+Total Time Played: 388.78 seconds
+--------------------------------------------------
+
+Game 22 Statistics:
+Time: 2025-05-29 23:41:08
+Game Duration: 21.66 seconds
+Wins: 5, Losses: 17
+Win Rate: 22.7%
+Overall Average Game Time: 18.66 seconds
+Average Winning Game Time: 25.35 seconds
+Winning Time Standard Deviation: 2.59 seconds
+Total Time Played: 410.44 seconds
+--------------------------------------------------
+
+Game 23 Statistics:
+Time: 2025-05-29 23:41:31
+Game Duration: 21.56 seconds
+Wins: 6, Losses: 17
+Win Rate: 26.1%
+Overall Average Game Time: 18.78 seconds
+Average Winning Game Time: 24.72 seconds
+Winning Time Standard Deviation: 2.75 seconds
+Total Time Played: 432.00 seconds
+--------------------------------------------------
+
+Game 24 Statistics:
+Time: 2025-05-29 23:41:51
+Game Duration: 20.18 seconds
+Wins: 6, Losses: 18
+Win Rate: 25.0%
+Overall Average Game Time: 18.84 seconds
+Average Winning Game Time: 24.72 seconds
+Winning Time Standard Deviation: 2.75 seconds
+Total Time Played: 452.19 seconds
+--------------------------------------------------
+
+Game 25 Statistics:
+Time: 2025-05-29 23:42:05
+Game Duration: 12.51 seconds
+Wins: 7, Losses: 18
+Win Rate: 28.0%
+Overall Average Game Time: 18.59 seconds
+Average Winning Game Time: 22.97 seconds
+Winning Time Standard Deviation: 4.97 seconds
+Total Time Played: 464.70 seconds
+--------------------------------------------------
+
+Game 26 Statistics:
+Time: 2025-05-29 23:42:30
+Game Duration: 25.67 seconds
+Wins: 7, Losses: 19
+Win Rate: 26.9%
+Overall Average Game Time: 18.86 seconds
+Average Winning Game Time: 22.97 seconds
+Winning Time Standard Deviation: 4.97 seconds
+Total Time Played: 490.37 seconds
+--------------------------------------------------
+
+Game 27 Statistics:
+Time: 2025-05-29 23:43:00
+Game Duration: 28.55 seconds
+Wins: 8, Losses: 19
+Win Rate: 29.6%
+Overall Average Game Time: 19.22 seconds
+Average Winning Game Time: 23.67 seconds
+Winning Time Standard Deviation: 5.00 seconds
+Total Time Played: 518.92 seconds
+--------------------------------------------------
+
+Game 28 Statistics:
+Time: 2025-05-29 23:43:03
+Game Duration: 2.69 seconds
+Wins: 8, Losses: 20
+Win Rate: 28.6%
+Overall Average Game Time: 18.63 seconds
+Average Winning Game Time: 23.67 seconds
+Winning Time Standard Deviation: 5.00 seconds
+Total Time Played: 521.61 seconds
+--------------------------------------------------
+
+Game 29 Statistics:
+Time: 2025-05-29 23:43:29
+Game Duration: 26.00 seconds
+Wins: 8, Losses: 21
+Win Rate: 27.6%
+Overall Average Game Time: 18.88 seconds
+Average Winning Game Time: 23.67 seconds
+Winning Time Standard Deviation: 5.00 seconds
+Total Time Played: 547.61 seconds
+--------------------------------------------------
+
+Game 30 Statistics:
+Time: 2025-05-29 23:43:44
+Game Duration: 13.95 seconds
+Wins: 9, Losses: 21
+Win Rate: 30.0%
+Overall Average Game Time: 18.72 seconds
+Average Winning Game Time: 22.59 seconds
+Winning Time Standard Deviation: 5.62 seconds
+Total Time Played: 561.56 seconds
+--------------------------------------------------
+
+Game 31 Statistics:
+Time: 2025-05-29 23:47:02
+Game Duration: 195.91 seconds
+Wins: 10, Losses: 21
+Win Rate: 32.3%
+Overall Average Game Time: 24.43 seconds
+Average Winning Game Time: 39.92 seconds
+Winning Time Standard Deviation: 52.27 seconds
+Total Time Played: 757.48 seconds
+--------------------------------------------------
+
+Game 32 Statistics:
+Time: 2025-05-29 23:47:28
+Game Duration: 24.76 seconds
+Wins: 11, Losses: 21
+Win Rate: 34.4%
+Overall Average Game Time: 24.44 seconds
+Average Winning Game Time: 38.54 seconds
+Winning Time Standard Deviation: 50.03 seconds
+Total Time Played: 782.24 seconds
+--------------------------------------------------
+
+Game 33 Statistics:
+Time: 2025-05-29 23:47:50
+Game Duration: 20.41 seconds
+Wins: 12, Losses: 21
+Win Rate: 36.4%
+Overall Average Game Time: 24.32 seconds
+Average Winning Game Time: 37.03 seconds
+Winning Time Standard Deviation: 48.16 seconds
+Total Time Played: 802.65 seconds
+--------------------------------------------------
+
+Game 34 Statistics:
+Time: 2025-05-29 23:48:16
+Game Duration: 24.35 seconds
+Wins: 13, Losses: 21
+Win Rate: 38.2%
+Overall Average Game Time: 24.32 seconds
+Average Winning Game Time: 36.06 seconds
+Winning Time Standard Deviation: 46.39 seconds
+Total Time Played: 827.00 seconds
+--------------------------------------------------
+
+Game 35 Statistics:
+Time: 2025-05-29 23:48:38
+Game Duration: 22.14 seconds
+Wins: 13, Losses: 22
+Win Rate: 37.1%
+Overall Average Game Time: 24.26 seconds
+Average Winning Game Time: 36.06 seconds
+Winning Time Standard Deviation: 46.39 seconds
+Total Time Played: 849.15 seconds
+--------------------------------------------------
+
+Game 36 Statistics:
+Time: 2025-05-29 23:48:57
+Game Duration: 19.04 seconds
+Wins: 13, Losses: 23
+Win Rate: 36.1%
+Overall Average Game Time: 24.12 seconds
+Average Winning Game Time: 36.06 seconds
+Winning Time Standard Deviation: 46.39 seconds
+Total Time Played: 868.18 seconds
+--------------------------------------------------
+
+Game 37 Statistics:
+Time: 2025-05-29 23:49:21
+Game Duration: 22.27 seconds
+Wins: 14, Losses: 23
+Win Rate: 37.8%
+Overall Average Game Time: 24.07 seconds
+Average Winning Game Time: 35.07 seconds
+Winning Time Standard Deviation: 44.85 seconds
+Total Time Played: 890.46 seconds
+--------------------------------------------------
+
+Game 38 Statistics:
+Time: 2025-05-29 23:49:47
+Game Duration: 25.10 seconds
+Wins: 15, Losses: 23
+Win Rate: 39.5%
+Overall Average Game Time: 24.09 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 915.56 seconds
+--------------------------------------------------
+
+Game 39 Statistics:
+Time: 2025-05-29 23:50:08
+Game Duration: 20.45 seconds
+Wins: 15, Losses: 24
+Win Rate: 38.5%
+Overall Average Game Time: 24.00 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 936.01 seconds
+--------------------------------------------------
+
+Game 40 Statistics:
+Time: 2025-05-29 23:50:25
+Game Duration: 17.42 seconds
+Wins: 15, Losses: 25
+Win Rate: 37.5%
+Overall Average Game Time: 23.84 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 953.43 seconds
+--------------------------------------------------
+
+Game 41 Statistics:
+Time: 2025-05-29 23:50:40
+Game Duration: 15.33 seconds
+Wins: 15, Losses: 26
+Win Rate: 36.6%
+Overall Average Game Time: 23.63 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 968.76 seconds
+--------------------------------------------------
+
+Game 42 Statistics:
+Time: 2025-05-29 23:50:54
+Game Duration: 13.40 seconds
+Wins: 15, Losses: 27
+Win Rate: 35.7%
+Overall Average Game Time: 23.38 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 982.16 seconds
+--------------------------------------------------
+
+Game 43 Statistics:
+Time: 2025-05-29 23:51:12
+Game Duration: 17.83 seconds
+Wins: 15, Losses: 28
+Win Rate: 34.9%
+Overall Average Game Time: 23.26 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 999.99 seconds
+--------------------------------------------------
+
+Game 44 Statistics:
+Time: 2025-05-29 23:51:28
+Game Duration: 16.52 seconds
+Wins: 15, Losses: 29
+Win Rate: 34.1%
+Overall Average Game Time: 23.10 seconds
+Average Winning Game Time: 34.41 seconds
+Winning Time Standard Deviation: 43.40 seconds
+Total Time Played: 1016.51 seconds
+--------------------------------------------------
+
+Game 45 Statistics:
+Time: 2025-05-29 23:51:57
+Game Duration: 26.97 seconds
+Wins: 16, Losses: 29
+Win Rate: 35.6%
+Overall Average Game Time: 23.19 seconds
+Average Winning Game Time: 33.94 seconds
+Winning Time Standard Deviation: 42.06 seconds
+Total Time Played: 1043.48 seconds
+--------------------------------------------------
+
+Game 46 Statistics:
+Time: 2025-05-29 23:52:16
+Game Duration: 19.07 seconds
+Wins: 16, Losses: 30
+Win Rate: 34.8%
+Overall Average Game Time: 23.10 seconds
+Average Winning Game Time: 33.94 seconds
+Winning Time Standard Deviation: 42.06 seconds
+Total Time Played: 1062.55 seconds
+--------------------------------------------------
+
+Game 47 Statistics:
+Time: 2025-05-29 23:52:35
+Game Duration: 18.95 seconds
+Wins: 16, Losses: 31
+Win Rate: 34.0%
+Overall Average Game Time: 23.01 seconds
+Average Winning Game Time: 33.94 seconds
+Winning Time Standard Deviation: 42.06 seconds
+Total Time Played: 1081.50 seconds
+--------------------------------------------------
+
+Game 48 Statistics:
+Time: 2025-05-29 23:53:00
+Game Duration: 24.26 seconds
+Wins: 17, Losses: 31
+Win Rate: 35.4%
+Overall Average Game Time: 23.04 seconds
+Average Winning Game Time: 33.38 seconds
+Winning Time Standard Deviation: 40.86 seconds
+Total Time Played: 1105.76 seconds
+--------------------------------------------------
+
+Game 49 Statistics:
+Time: 2025-05-29 23:53:16
+Game Duration: 15.41 seconds
+Wins: 17, Losses: 32
+Win Rate: 34.7%
+Overall Average Game Time: 22.88 seconds
+Average Winning Game Time: 33.38 seconds
+Winning Time Standard Deviation: 40.86 seconds
+Total Time Played: 1121.17 seconds
+--------------------------------------------------
+
+Game 50 Statistics:
+Time: 2025-05-29 23:53:33
+Game Duration: 17.37 seconds
+Wins: 17, Losses: 33
+Win Rate: 34.0%
+Overall Average Game Time: 22.77 seconds
+Average Winning Game Time: 33.38 seconds
+Winning Time Standard Deviation: 40.86 seconds
+Total Time Played: 1138.54 seconds
+--------------------------------------------------
+
+Game 51 Statistics:
+Time: 2025-05-29 23:54:02
+Game Duration: 29.10 seconds
+Wins: 17, Losses: 34
+Win Rate: 33.3%
+Overall Average Game Time: 22.89 seconds
+Average Winning Game Time: 33.38 seconds
+Winning Time Standard Deviation: 40.86 seconds
+Total Time Played: 1167.64 seconds
+--------------------------------------------------
+
+Game 52 Statistics:
+Time: 2025-05-29 23:54:29
+Game Duration: 25.07 seconds
+Wins: 18, Losses: 34
+Win Rate: 34.6%
+Overall Average Game Time: 22.94 seconds
+Average Winning Game Time: 32.91 seconds
+Winning Time Standard Deviation: 39.76 seconds
+Total Time Played: 1192.71 seconds
+--------------------------------------------------
+
+Game 53 Statistics:
+Time: 2025-05-29 23:54:52
+Game Duration: 22.92 seconds
+Wins: 18, Losses: 35
+Win Rate: 34.0%
+Overall Average Game Time: 22.94 seconds
+Average Winning Game Time: 32.91 seconds
+Winning Time Standard Deviation: 39.76 seconds
+Total Time Played: 1215.63 seconds
+--------------------------------------------------
+
+Game 54 Statistics:
+Time: 2025-05-29 23:55:11
+Game Duration: 17.99 seconds
+Wins: 19, Losses: 35
+Win Rate: 35.2%
+Overall Average Game Time: 22.84 seconds
+Average Winning Game Time: 32.13 seconds
+Winning Time Standard Deviation: 38.84 seconds
+Total Time Played: 1233.62 seconds
+--------------------------------------------------
+
+Game 55 Statistics:
+Time: 2025-05-29 23:55:40
+Game Duration: 29.23 seconds
+Wins: 19, Losses: 36
+Win Rate: 34.5%
+Overall Average Game Time: 22.96 seconds
+Average Winning Game Time: 32.13 seconds
+Winning Time Standard Deviation: 38.84 seconds
+Total Time Played: 1262.85 seconds
+--------------------------------------------------
+
+Game 56 Statistics:
+Time: 2025-05-29 23:55:56
+Game Duration: 15.29 seconds
+Wins: 19, Losses: 37
+Win Rate: 33.9%
+Overall Average Game Time: 22.82 seconds
+Average Winning Game Time: 32.13 seconds
+Winning Time Standard Deviation: 38.84 seconds
+Total Time Played: 1278.14 seconds
+--------------------------------------------------
+
+Game 57 Statistics:
+Time: 2025-05-29 23:56:12
+Game Duration: 14.95 seconds
+Wins: 20, Losses: 37
+Win Rate: 35.1%
+Overall Average Game Time: 22.69 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1293.09 seconds
+--------------------------------------------------
+
+Game 58 Statistics:
+Time: 2025-05-29 23:56:13
+Game Duration: 0.96 seconds
+Wins: 20, Losses: 38
+Win Rate: 34.5%
+Overall Average Game Time: 22.31 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1294.05 seconds
+--------------------------------------------------
+
+Game 59 Statistics:
+Time: 2025-05-29 23:56:30
+Game Duration: 17.05 seconds
+Wins: 20, Losses: 39
+Win Rate: 33.9%
+Overall Average Game Time: 22.22 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1311.10 seconds
+--------------------------------------------------
+
+Game 60 Statistics:
+Time: 2025-05-29 23:56:53
+Game Duration: 22.50 seconds
+Wins: 20, Losses: 40
+Win Rate: 33.3%
+Overall Average Game Time: 22.23 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1333.60 seconds
+--------------------------------------------------
+
+Game 61 Statistics:
+Time: 2025-05-29 23:57:09
+Game Duration: 16.19 seconds
+Wins: 20, Losses: 41
+Win Rate: 32.8%
+Overall Average Game Time: 22.13 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1349.80 seconds
+--------------------------------------------------
+
+Game 62 Statistics:
+Time: 2025-05-29 23:57:29
+Game Duration: 20.04 seconds
+Wins: 20, Losses: 42
+Win Rate: 32.3%
+Overall Average Game Time: 22.09 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1369.83 seconds
+--------------------------------------------------
+
+Game 63 Statistics:
+Time: 2025-05-29 23:57:46
+Game Duration: 17.15 seconds
+Wins: 20, Losses: 43
+Win Rate: 31.7%
+Overall Average Game Time: 22.02 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1386.98 seconds
+--------------------------------------------------
+
+Game 64 Statistics:
+Time: 2025-05-29 23:57:56
+Game Duration: 9.96 seconds
+Wins: 20, Losses: 44
+Win Rate: 31.2%
+Overall Average Game Time: 21.83 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1396.94 seconds
+--------------------------------------------------
+
+Game 65 Statistics:
+Time: 2025-05-29 23:58:16
+Game Duration: 20.06 seconds
+Wins: 20, Losses: 45
+Win Rate: 30.8%
+Overall Average Game Time: 21.80 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1417.01 seconds
+--------------------------------------------------
+
+Game 66 Statistics:
+Time: 2025-05-29 23:58:40
+Game Duration: 24.29 seconds
+Wins: 20, Losses: 46
+Win Rate: 30.3%
+Overall Average Game Time: 21.84 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1441.29 seconds
+--------------------------------------------------
+
+Game 67 Statistics:
+Time: 2025-05-29 23:59:06
+Game Duration: 25.52 seconds
+Wins: 20, Losses: 47
+Win Rate: 29.9%
+Overall Average Game Time: 21.89 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1466.82 seconds
+--------------------------------------------------
+
+Game 68 Statistics:
+Time: 2025-05-29 23:59:24
+Game Duration: 17.61 seconds
+Wins: 20, Losses: 48
+Win Rate: 29.4%
+Overall Average Game Time: 21.83 seconds
+Average Winning Game Time: 31.27 seconds
+Winning Time Standard Deviation: 38.04 seconds
+Total Time Played: 1484.43 seconds
+--------------------------------------------------
+
+Game 69 Statistics:
+Time: 2025-05-29 23:59:45
+Game Duration: 19.61 seconds
+Wins: 21, Losses: 48
+Win Rate: 30.4%
+Overall Average Game Time: 21.80 seconds
+Average Winning Game Time: 30.71 seconds
+Winning Time Standard Deviation: 37.21 seconds
+Total Time Played: 1504.04 seconds
+--------------------------------------------------
+
+Game 70 Statistics:
+Time: 2025-05-30 00:00:04
+Game Duration: 19.20 seconds
+Wins: 21, Losses: 49
+Win Rate: 30.0%
+Overall Average Game Time: 21.76 seconds
+Average Winning Game Time: 30.71 seconds
+Winning Time Standard Deviation: 37.21 seconds
+Total Time Played: 1523.24 seconds
+--------------------------------------------------
+
+Game 71 Statistics:
+Time: 2025-05-30 00:00:21
+Game Duration: 16.73 seconds
+Wins: 21, Losses: 50
+Win Rate: 29.6%
+Overall Average Game Time: 21.69 seconds
+Average Winning Game Time: 30.71 seconds
+Winning Time Standard Deviation: 37.21 seconds
+Total Time Played: 1539.97 seconds
+--------------------------------------------------
+
+Game 72 Statistics:
+Time: 2025-05-30 00:00:40
+Game Duration: 18.98 seconds
+Wins: 21, Losses: 51
+Win Rate: 29.2%
+Overall Average Game Time: 21.65 seconds
+Average Winning Game Time: 30.71 seconds
+Winning Time Standard Deviation: 37.21 seconds
+Total Time Played: 1558.95 seconds
+--------------------------------------------------
+
+Game 73 Statistics:
+Time: 2025-05-30 00:00:57
+Game Duration: 15.71 seconds
+Wins: 22, Losses: 51
+Win Rate: 30.1%
+Overall Average Game Time: 21.57 seconds
+Average Winning Game Time: 30.03 seconds
+Winning Time Standard Deviation: 36.49 seconds
+Total Time Played: 1574.66 seconds
+--------------------------------------------------
+
+Game 74 Statistics:
+Time: 2025-05-30 00:01:20
+Game Duration: 22.34 seconds
+Wins: 23, Losses: 51
+Win Rate: 31.1%
+Overall Average Game Time: 21.58 seconds
+Average Winning Game Time: 29.70 seconds
+Winning Time Standard Deviation: 35.72 seconds
+Total Time Played: 1597.00 seconds
+--------------------------------------------------
+
+Game 75 Statistics:
+Time: 2025-05-30 00:01:45
+Game Duration: 23.03 seconds
+Wins: 24, Losses: 51
+Win Rate: 32.0%
+Overall Average Game Time: 21.60 seconds
+Average Winning Game Time: 29.42 seconds
+Winning Time Standard Deviation: 34.99 seconds
+Total Time Played: 1620.03 seconds
+--------------------------------------------------
+
+Game 76 Statistics:
+Time: 2025-05-30 00:02:06
+Game Duration: 21.12 seconds
+Wins: 24, Losses: 52
+Win Rate: 31.6%
+Overall Average Game Time: 21.59 seconds
+Average Winning Game Time: 29.42 seconds
+Winning Time Standard Deviation: 34.99 seconds
+Total Time Played: 1641.15 seconds
+--------------------------------------------------
+
+Game 77 Statistics:
+Time: 2025-05-30 00:02:32
+Game Duration: 26.29 seconds
+Wins: 24, Losses: 53
+Win Rate: 31.2%
+Overall Average Game Time: 21.66 seconds
+Average Winning Game Time: 29.42 seconds
+Winning Time Standard Deviation: 34.99 seconds
+Total Time Played: 1667.44 seconds
+--------------------------------------------------
+
+Game 78 Statistics:
+Time: 2025-05-30 00:02:56
+Game Duration: 21.75 seconds
+Wins: 25, Losses: 53
+Win Rate: 32.1%
+Overall Average Game Time: 21.66 seconds
+Average Winning Game Time: 29.11 seconds
+Winning Time Standard Deviation: 34.32 seconds
+Total Time Played: 1689.19 seconds
+--------------------------------------------------
+
+Game 79 Statistics:
+Time: 2025-05-30 00:03:21
+Game Duration: 23.58 seconds
+Wins: 26, Losses: 53
+Win Rate: 32.9%
+Overall Average Game Time: 21.68 seconds
+Average Winning Game Time: 28.90 seconds
+Winning Time Standard Deviation: 33.67 seconds
+Total Time Played: 1712.77 seconds
+--------------------------------------------------
+
+Game 80 Statistics:
+Time: 2025-05-30 00:03:34
+Game Duration: 13.03 seconds
+Wins: 26, Losses: 54
+Win Rate: 32.5%
+Overall Average Game Time: 21.57 seconds
+Average Winning Game Time: 28.90 seconds
+Winning Time Standard Deviation: 33.67 seconds
+Total Time Played: 1725.80 seconds
+--------------------------------------------------
+
+Game 81 Statistics:
+Time: 2025-05-30 00:03:53
+Game Duration: 19.48 seconds
+Wins: 26, Losses: 55
+Win Rate: 32.1%
+Overall Average Game Time: 21.55 seconds
+Average Winning Game Time: 28.90 seconds
+Winning Time Standard Deviation: 33.67 seconds
+Total Time Played: 1745.28 seconds
+--------------------------------------------------
+
+Game 82 Statistics:
+Time: 2025-05-30 00:04:15
+Game Duration: 22.00 seconds
+Wins: 26, Losses: 56
+Win Rate: 31.7%
+Overall Average Game Time: 21.55 seconds
+Average Winning Game Time: 28.90 seconds
+Winning Time Standard Deviation: 33.67 seconds
+Total Time Played: 1767.28 seconds
+--------------------------------------------------
+
+Game 83 Statistics:
+Time: 2025-05-30 00:04:51
+Game Duration: 34.10 seconds
+Wins: 27, Losses: 56
+Win Rate: 32.5%
+Overall Average Game Time: 21.70 seconds
+Average Winning Game Time: 29.09 seconds
+Winning Time Standard Deviation: 33.05 seconds
+Total Time Played: 1801.38 seconds
+--------------------------------------------------
+
+Game 84 Statistics:
+Time: 2025-05-30 00:05:03
+Game Duration: 12.17 seconds
+Wins: 27, Losses: 57
+Win Rate: 32.1%
+Overall Average Game Time: 21.59 seconds
+Average Winning Game Time: 29.09 seconds
+Winning Time Standard Deviation: 33.05 seconds
+Total Time Played: 1813.55 seconds
+--------------------------------------------------
+
+Game 85 Statistics:
+Time: 2025-05-30 00:05:27
+Game Duration: 22.53 seconds
+Wins: 28, Losses: 57
+Win Rate: 32.9%
+Overall Average Game Time: 21.60 seconds
+Average Winning Game Time: 28.86 seconds
+Winning Time Standard Deviation: 32.48 seconds
+Total Time Played: 1836.07 seconds
+--------------------------------------------------
+
+Game 86 Statistics:
+Time: 2025-05-30 00:05:33
+Game Duration: 6.14 seconds
+Wins: 28, Losses: 58
+Win Rate: 32.6%
+Overall Average Game Time: 21.42 seconds
+Average Winning Game Time: 28.86 seconds
+Winning Time Standard Deviation: 32.48 seconds
+Total Time Played: 1842.22 seconds
+--------------------------------------------------
+
+Game 87 Statistics:
+Time: 2025-05-30 00:05:57
+Game Duration: 22.25 seconds
+Wins: 29, Losses: 58
+Win Rate: 33.3%
+Overall Average Game Time: 21.43 seconds
+Average Winning Game Time: 28.63 seconds
+Winning Time Standard Deviation: 31.94 seconds
+Total Time Played: 1864.47 seconds
+--------------------------------------------------
+
+Game 88 Statistics:
+Time: 2025-05-30 00:06:00
+Game Duration: 3.42 seconds
+Wins: 29, Losses: 59
+Win Rate: 33.0%
+Overall Average Game Time: 21.23 seconds
+Average Winning Game Time: 28.63 seconds
+Winning Time Standard Deviation: 31.94 seconds
+Total Time Played: 1867.89 seconds
+--------------------------------------------------
+
+Game 89 Statistics:
+Time: 2025-05-30 00:06:12
+Game Duration: 11.92 seconds
+Wins: 29, Losses: 60
+Win Rate: 32.6%
+Overall Average Game Time: 21.12 seconds
+Average Winning Game Time: 28.63 seconds
+Winning Time Standard Deviation: 31.94 seconds
+Total Time Played: 1879.81 seconds
+--------------------------------------------------
+
+Game 90 Statistics:
+Time: 2025-05-30 00:06:29
+Game Duration: 16.91 seconds
+Wins: 29, Losses: 61
+Win Rate: 32.2%
+Overall Average Game Time: 21.07 seconds
+Average Winning Game Time: 28.63 seconds
+Winning Time Standard Deviation: 31.94 seconds
+Total Time Played: 1896.72 seconds
+--------------------------------------------------
+
+Game 91 Statistics:
+Time: 2025-05-30 00:06:43
+Game Duration: 14.04 seconds
+Wins: 29, Losses: 62
+Win Rate: 31.9%
+Overall Average Game Time: 21.00 seconds
+Average Winning Game Time: 28.63 seconds
+Winning Time Standard Deviation: 31.94 seconds
+Total Time Played: 1910.76 seconds
+--------------------------------------------------
+
+Game 92 Statistics:
+Time: 2025-05-30 00:07:00
+Game Duration: 15.34 seconds
+Wins: 30, Losses: 62
+Win Rate: 32.6%
+Overall Average Game Time: 20.94 seconds
+Average Winning Game Time: 28.19 seconds
+Winning Time Standard Deviation: 31.49 seconds
+Total Time Played: 1926.11 seconds
+--------------------------------------------------
+
+Game 93 Statistics:
+Time: 2025-05-30 00:07:12
+Game Duration: 12.53 seconds
+Wins: 30, Losses: 63
+Win Rate: 32.3%
+Overall Average Game Time: 20.85 seconds
+Average Winning Game Time: 28.19 seconds
+Winning Time Standard Deviation: 31.49 seconds
+Total Time Played: 1938.64 seconds
+--------------------------------------------------
+
+Game 94 Statistics:
+Time: 2025-05-30 00:07:29
+Game Duration: 16.92 seconds
+Wins: 30, Losses: 64
+Win Rate: 31.9%
+Overall Average Game Time: 20.80 seconds
+Average Winning Game Time: 28.19 seconds
+Winning Time Standard Deviation: 31.49 seconds
+Total Time Played: 1955.55 seconds
+--------------------------------------------------
+
+Game 95 Statistics:
+Time: 2025-05-30 00:07:44
+Game Duration: 15.04 seconds
+Wins: 30, Losses: 65
+Win Rate: 31.6%
+Overall Average Game Time: 20.74 seconds
+Average Winning Game Time: 28.19 seconds
+Winning Time Standard Deviation: 31.49 seconds
+Total Time Played: 1970.60 seconds
+--------------------------------------------------
+
+Game 96 Statistics:
+Time: 2025-05-30 00:08:08
+Game Duration: 23.96 seconds
+Wins: 30, Losses: 66
+Win Rate: 31.2%
+Overall Average Game Time: 20.78 seconds
+Average Winning Game Time: 28.19 seconds
+Winning Time Standard Deviation: 31.49 seconds
+Total Time Played: 1994.56 seconds
+--------------------------------------------------
+
+Game 97 Statistics:
+Time: 2025-05-30 00:08:35
+Game Duration: 25.55 seconds
+Wins: 31, Losses: 66
+Win Rate: 32.0%
+Overall Average Game Time: 20.83 seconds
+Average Winning Game Time: 28.10 seconds
+Winning Time Standard Deviation: 30.98 seconds
+Total Time Played: 2020.11 seconds
+--------------------------------------------------
+
+Game 98 Statistics:
+Time: 2025-05-30 00:08:57
+Game Duration: 21.31 seconds
+Wins: 31, Losses: 67
+Win Rate: 31.6%
+Overall Average Game Time: 20.83 seconds
+Average Winning Game Time: 28.10 seconds
+Winning Time Standard Deviation: 30.98 seconds
+Total Time Played: 2041.42 seconds
+--------------------------------------------------
+
+Game 99 Statistics:
+Time: 2025-05-30 00:09:21
+Game Duration: 24.40 seconds
+Wins: 31, Losses: 68
+Win Rate: 31.3%
+Overall Average Game Time: 20.87 seconds
+Average Winning Game Time: 28.10 seconds
+Winning Time Standard Deviation: 30.98 seconds
+Total Time Played: 2065.82 seconds
+--------------------------------------------------
+
+Game 100 Statistics:
+Time: 2025-05-30 00:09:41
+Game Duration: 19.48 seconds
+Wins: 31, Losses: 69
+Win Rate: 31.0%
+Overall Average Game Time: 20.85 seconds
+Average Winning Game Time: 28.10 seconds
+Winning Time Standard Deviation: 30.98 seconds
+Total Time Played: 2085.30 seconds
+--------------------------------------------------
+
+
