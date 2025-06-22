@@ -1,0 +1,1 @@
+pyautogui + probability = minesweeper bot
