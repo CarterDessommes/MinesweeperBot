@@ -6,6 +6,9 @@ from mss import mss
 # initial testing program to get pyauto gui and all the pixels lined up.
 # feel free to play around with this also!
 
+# set for https://minesweeperonline.com/, with display settings set to left and zoom
+# at 200%.
+
 top_left_x, top_left_y = 260, 258
 tile_size = 32
 
